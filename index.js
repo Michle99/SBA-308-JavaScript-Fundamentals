@@ -94,7 +94,8 @@ function processSubmission(learnerData, assignmentScores, submission, assignment
   const courseID = CourseInfo.id;
   const submissionDate = new Date(submission.submission.submitted_at);
 
-  // const assignment = findAssignmentByID(assignments, assignmentID);
+  // find assignments by id
+  const assignment = findAssignmentByID(assignments, assignmentID);
 
   // if (!assignment) {
   //   console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
