@@ -140,7 +140,7 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
 
   for (const learnerID in learnerData) {
     const learner = learnerData[learnerID];
-    // const weightedAverage = (learner.totalScore / learner.totalWeight) * 100;
+    const weightedAverage = (learner.totalScore / learner.totalWeight) * 100;
 
     // const learnerResult = {
     //   id: learner.id,
