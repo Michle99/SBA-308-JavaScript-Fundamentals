@@ -136,27 +136,27 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
     }
   }
 
-  // const results = [];
+  const results = [];
 
-  // for (const learnerID in learnerData) {
-  //   const learner = learnerData[learnerID];
-  //   const weightedAverage = (learner.totalScore / learner.totalWeight) * 100;
+  for (const learnerID in learnerData) {
+    // const learner = learnerData[learnerID];
+    // const weightedAverage = (learner.totalScore / learner.totalWeight) * 100;
 
-  //   const learnerResult = {
-  //     id: learner.id,
-  //     avg: weightedAverage,
-  //   }
+    // const learnerResult = {
+    //   id: learner.id,
+    //   avg: weightedAverage,
+    // }
 
-  //   for (const assignment of assignments) {
-  //     if (assignmentScores[assignment.id]) {
-  //       learnerResult[assignment.id] = assignmentScores[assignment.id];
-  //     }
-  //   }
+    // for (const assignment of assignments) {
+    //   if (assignmentScores[assignment.id]) {
+    //     learnerResult[assignment.id] = assignmentScores[assignment.id];
+    //   }
+    // }
 
-  //   results.push(learnerResult);
-  // }
+    // results.push(learnerResult);
+  }
 
-  // return results;
+  return results;
 }
 
 
