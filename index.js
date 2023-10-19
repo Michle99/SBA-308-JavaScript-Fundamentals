@@ -1,7 +1,7 @@
 // The provided course information.
 const CourseInfo = {
     id: 451,
-    name: "Introduction to JavaScript"
+    name: "Introduction to JavaScript",
 };
   
 // The provided assignment group.
@@ -90,11 +90,18 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
   // Check submissions and find date of submitted assignments
   for (const submission of LearnerSubmissions) {
     const learnID = submission.learner_id;
-    const assignmentID = submission.assigment_id;
+    const assignmentID = submission.assignment_id;
     const submissionDate = new Date(submission.submission.submitted_at);
-    const dueDate = new Date(
-      assignments.find((assignment) => assignment.id === assignmentID).due_at
-    );
+    
+    // Find the assignment with specified ID
+    // const assignment = assignments.find((assignment) => assignment.id === assignmentID);
+
+    // if (!assignment) {
+    //   console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
+    //   continue; // Skip this submission if the assignment is not found.
+    // }
+
+    const dueDate = new Date(assignment.due_at);
 
     if (courseID !== AssignmentGroup.course_id) {
       throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
@@ -110,11 +117,48 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
     //     throw new Error("Invalid input: points_possible cannot be 0.");
     //   }
 
+    //   if (typeof score !== "number" || isNaN(score)) {
+    //     throw new Error("Invalid input: Submission score must be a number.");
+    //   }
 
+    //   if (!learnerData[learnID]) {
+    //     learnerData[learnID] = {
+    //       id: learnID,
+    //       totalScore: 0,
+    //       totalWeight: 0,
+    //     };
+    //   }
+
+    //   learnerData[learnID].totalScore += (score / pointsPossible) * pointsPossible;
+    //   learnerData[learnID].totalWeight += pointsPossible;
+    //   assignmentScores[assignmentID] = (score / pointsPossible) * 100;
 
     // }
-
   }
 
+  // const results = [];
+
+  // for (const learnerID in learnerData) {
+  //   const learner = learnerData[learnerID];
+  //   const weightedAverage = (learner.totalScore / learner.totalWeight) * 100;
+
+  //   const learnerResult = {
+  //     id: learner.id,
+  //     avg: weightedAverage,
+  //   }
+
+  //   for (const assignment of assignments) {
+  //     if (assignmentScores[assignment.id]) {
+  //       learnerResult[assignment.id] = assignmentScores[assignment.id];
+  //     }
+  //   }
+
+  //   results.push(learnerResult);
+  // }
+
+  // return results;
 }
 
+
+const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+console.log(result);
