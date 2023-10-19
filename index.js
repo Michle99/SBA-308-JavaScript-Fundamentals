@@ -107,11 +107,11 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
       throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
     }
 
-    // if (submissionDate > dueDate) {
-    //   const score = submission.submission.score;
-    //   const pointsPossible = assignments.find(
-    //     (assignment) => assignment.id === assignmentID
-    //   ).points_possible;
+    if (submissionDate > dueDate) {
+      const score = submission.submission.score;
+      const pointsPossible = assignments.find(
+        (assignment) => assignment.id === assignmentID
+      ).points_possible;
     
     //   if (pointsPossible === 0) {
     //     throw new Error("Invalid input: points_possible cannot be 0.");
