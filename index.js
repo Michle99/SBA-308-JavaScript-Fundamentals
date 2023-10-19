@@ -147,11 +147,11 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
       avg: weightedAverage,
     }
 
-    // for (const assignment of assignments) {
-    //   if (assignmentScores[assignment.id]) {
-    //     learnerResult[assignment.id] = assignmentScores[assignment.id];
-    //   }
-    // }
+    for (const assignment of assignments) {
+      if (assignmentScores[assignment.id]) {
+        learnerResult[assignment.id] = assignmentScores[assignment.id];
+      }
+    }
 
     // results.push(learnerResult);
   }
@@ -160,5 +160,5 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
 }
 
 
-const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-console.log(result);
+// const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+// console.log(result);
