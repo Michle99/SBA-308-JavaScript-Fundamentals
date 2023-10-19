@@ -77,9 +77,16 @@ const LearnerSubmissions = [
 ];
 
 
-function validateCourseAssignmentGroup(CourseInfo, AssignmentGroup) {
-    if (CourseInfo.id !== AssignmentGroup.course_id) {
-      throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
-    }
+// Learner Data function to get user data
+function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
+  const courseID = CourseInfo.id;
+  const assignmentGroupID = AssignmentGroup.id;
+  const assignments = AssignmentGroup.assignments;
+  const groupWeight = AssignmentGroup.group_weight;
+  const assignmentScores = {};
+
+  const learnerData = {};
+
+  
 }
 
