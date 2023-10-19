@@ -87,9 +87,9 @@ function isValidSubmission(submission, assignment) {
 
   if (pointsPossible === 0 || typeof score !== "number" || isNaN(score)) {
     return false;
+  } else { 
+    return true;
   }
-
-  return true;
 }
 
 function calculateWeightedAverage(learnerData) {
