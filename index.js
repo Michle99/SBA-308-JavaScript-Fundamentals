@@ -77,14 +77,15 @@ const LearnerSubmissions = [
 ];
 
 
-// Learner Data function to get user data
+// Find valid assignments
 function findAssignmentByID(assignments, assignmentID) {
   return assignments.find((assignment) => assignment.id === assignmentID);
 }
 
-// function calculateWeightedAverage(totalScore, totalWeight) {
-//   return (totalScore / totalWeight) * 100;
-// }
+// calculate weighted average
+function calculateWeightedAverage(totalScore, totalWeight) {
+  return (totalScore / totalWeight) * 100;
+}
 
 // function processSubmission(learnerData, assignmentScores, submission, assignments) {
 //   const learnID = submission.learner_id;
