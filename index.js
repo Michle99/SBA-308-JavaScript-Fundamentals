@@ -96,10 +96,10 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
     // Find the assignment with specified ID
     const assignment = assignments.find((assignment) => assignment.id === assignmentID);
 
-    // if (!assignment) {
-    //   console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
-    //   continue; // Skip this submission if the assignment is not found.
-    // }
+    if (!assignment) {
+      console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
+      continue; // Skip this submission if the assignment is not found.
+    }
 
     const dueDate = new Date(assignment.due_at);
 
