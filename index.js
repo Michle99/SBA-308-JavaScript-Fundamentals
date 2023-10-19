@@ -87,50 +87,51 @@ function calculateWeightedAverage(totalScore, totalWeight) {
   return (totalScore / totalWeight) * 100;
 }
 
-// function processSubmission(learnerData, assignmentScores, submission, assignments) {
-//   const learnID = submission.learner_id;
-//   const assignmentID = submission.assignment_id;
-//    const courseID = CourseInfo.id;
-//   const submissionDate = new Date(submission.submission.submitted_at);
+// Process submissions, late submissions and assignment scores
+function processSubmission(learnerData, assignmentScores, submission, assignments) {
+  const learnID = submission.learner_id;
+  const assignmentID = submission.assignment_id;
+  const courseID = CourseInfo.id;
+  const submissionDate = new Date(submission.submission.submitted_at);
 
-//   const assignment = findAssignmentByID(assignments, assignmentID);
+  // const assignment = findAssignmentByID(assignments, assignmentID);
 
-//   if (!assignment) {
-//     console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
-//     return; // Skip this submission if the assignment is not found.
-//   }
+  // if (!assignment) {
+  //   console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
+  //   return; // Skip this submission if the assignment is not found.
+  // }
 
-//   const dueDate = new Date(assignment.due_at);
+  // const dueDate = new Date(assignment.due_at);
 
-//   if (courseID !== AssignmentGroup.course_id) {
-//     throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
-//   }
+  // if (courseID !== AssignmentGroup.course_id) {
+  //   throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
+  // }
 
-//   if (submissionDate > dueDate) {
-//     const score = submission.submission.score;
-//     const pointsPossible = assignment.points_possible;
+  // if (submissionDate > dueDate) {
+  //   const score = submission.submission.score;
+  //   const pointsPossible = assignment.points_possible;
 
-//     if (pointsPossible === 0) {
-//       throw new Error("Invalid input: points_possible cannot be 0.");
-//     }
+  //   if (pointsPossible === 0) {
+  //     throw new Error("Invalid input: points_possible cannot be 0.");
+  //   }
 
-//     if (typeof score !== "number" || isNaN(score)) {
-//       throw new Error("Invalid input: Submission score must be a number.");
-//     }
+  //   if (typeof score !== "number" || isNaN(score)) {
+  //     throw new Error("Invalid input: Submission score must be a number.");
+  //   }
 
-//     if (!learnerData[learnID]) {
-//       learnerData[learnID] = {
-//         id: learnID,
-//         totalScore: 0,
-//         totalWeight: 0,
-//       };
-//     }
+    // if (!learnerData[learnID]) {
+    //   learnerData[learnID] = {
+    //     id: learnID,
+    //     totalScore: 0,
+    //     totalWeight: 0,
+    //   };
+    // }
 
-//     learnerData[learnID].totalScore += (score / pointsPossible) * pointsPossible;
-//     learnerData[learnID].totalWeight += pointsPossible;
-//     assignmentScores[assignmentID] = (score / pointsPossible) * 100;
-//   }
-// }
+    // learnerData[learnID].totalScore += (score / pointsPossible) * pointsPossible;
+    // learnerData[learnID].totalWeight += pointsPossible;
+    // assignmentScores[assignmentID] = (score / pointsPossible) * 100;
+  }
+}
 
 // function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
  
