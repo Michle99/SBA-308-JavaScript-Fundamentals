@@ -76,11 +76,12 @@ const LearnerSubmissions = [
     }
 ];
 
-
+// Check if the assignment group belongs to the course.
 function isValidCourseAssignmentGroup(CourseInfo, AssignmentGroup) {
   return CourseInfo.id === AssignmentGroup.course_id;
 }
 
+// Check if a learner's submission is valid.
 function isValidSubmission(submission, assignment) {
   const score = submission.submission.score;
   const pointsPossible = assignment.points_possible;
@@ -92,10 +93,12 @@ function isValidSubmission(submission, assignment) {
   }
 }
 
+// Calculate the weighted average of a learner's scores.
 function calculateWeightedAverage(learnerData) {
   return (learnerData.totalScore / learnerData.totalWeight) * 100;
 }
 
+// Process learner data, calculate scores, and return the results.
 function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
   if (!isValidCourseAssignmentGroup(CourseInfo, AssignmentGroup)) {
     throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
@@ -134,6 +137,7 @@ function processLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
   return { learnerData, assignmentScores };
 }
 
+// Get and format learner data, including scores and averages.
 function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
   try {
     const { learnerData, assignmentScores } = processLearnerData(
@@ -168,5 +172,6 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
  
 }
 
+// Get learner data and handle potential errors.
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 console.log(result);
