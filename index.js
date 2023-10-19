@@ -121,13 +121,13 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
         throw new Error("Invalid input: Submission score must be a number.");
       }
 
-    //   if (!learnerData[learnID]) {
-    //     learnerData[learnID] = {
-    //       id: learnID,
-    //       totalScore: 0,
-    //       totalWeight: 0,
-    //     };
-    //   }
+      if (!learnerData[learnID]) {
+        learnerData[learnID] = {
+          id: learnID,
+          totalScore: 0,
+          totalWeight: 0,
+        };
+      }
 
     //   learnerData[learnID].totalScore += (score / pointsPossible) * pointsPossible;
     //   learnerData[learnID].totalWeight += pointsPossible;
