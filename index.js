@@ -135,42 +135,42 @@ function processSubmission(learnerData, assignmentScores, submission, assignment
   }
 }
 
-// function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
- 
-//   const assignmentGroupID = AssignmentGroup.id;
-//   const assignments = AssignmentGroup.assignments;
-//   const groupWeight = AssignmentGroup.group_weight;
-//   const assignmentScores = {};
+function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
+  const courseID = CourseInfo.id;
+  const assignmentGroupID = AssignmentGroup.id;
+  const assignments = AssignmentGroup.assignments;
+  const groupWeight = AssignmentGroup.group_weight;
+  const assignmentScores = {};
 
-//   const learnerData = {};
+  const learnerData = {};
 
-//   // Check submissions and find date of submitted assignments
-//   for (const submission of LearnerSubmissions) {
-//     processSubmission(learnerData, assignmentScores, submission, assignments);
-//   }
+  // Check submissions and find date of submitted assignments
+  for (const submission of LearnerSubmissions) {
+    processSubmission(learnerData, assignmentScores, submission, assignments);
+  }
 
-//   const results = [];
+  const results = [];
 
-//   for (const learnerID in learnerData) {
-//     const learner = learnerData[learnerID];
-//     const weightedAverage = calculateWeightedAverage(learner.totalScore, learner.totalWeight);
+  for (const learnerID in learnerData) {
+    const learner = learnerData[learnerID];
+    const weightedAverage = calculateWeightedAverage(learner.totalScore, learner.totalWeight);
 
-//     const learnerResult = {
-//       id: learner.id,
-//       avg: weightedAverage,
-//     };
+    const learnerResult = {
+      id: learner.id,
+      avg: weightedAverage,
+    };
 
-//     for (const assignment of assignments) {
-//       if (assignmentScores[assignment.id]) {
-//         learnerResult[assignment.id] = assignmentScores[assignment.id];
-//       }
-//     }
+    for (const assignment of assignments) {
+      if (assignmentScores[assignment.id]) {
+        learnerResult[assignment.id] = assignmentScores[assignment.id];
+      }
+    }
 
-//     results.push(learnerResult);
-//   }
+    results.push(learnerResult);
+  }
 
-//   return results;
-// }
+  return results;
+}
 
-// const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-// console.log(result);
+const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+console.log(result);
