@@ -87,6 +87,15 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
 
   const learnerData = {};
 
-  
+  // Check submissions and find date of submitted assignments
+  for (const submission of LearnerSubmissions) {
+    const learnID = submission.learner_id;
+    const assignmentID = submission.assigment_id;
+    const submissionDate = new Date(submission.submission.submitted_at);
+    const dueDate = new Date(
+      assignments.find((assignment) => assignment.id === assignmentID).due_at
+    );
+  }
+
 }
 
