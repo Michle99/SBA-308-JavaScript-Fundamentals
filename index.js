@@ -95,6 +95,25 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
     const dueDate = new Date(
       assignments.find((assignment) => assignment.id === assignmentID).due_at
     );
+
+    if (courseID !== AssignmentGroup.course_id) {
+      throw new Error("Invalid input: AssignmentGroup does not belong to the course.");
+    }
+
+    // if (submissionDate > dueDate) {
+    //   const score = submission.submission.score;
+    //   const pointsPossible = assignments.find(
+    //     (assignment) => assignment.id === assignmentID
+    //   ).points_possible;
+    
+    //   if (pointsPossible === 0) {
+    //     throw new Error("Invalid input: points_possible cannot be 0.");
+    //   }
+
+
+
+    // }
+
   }
 
 }
