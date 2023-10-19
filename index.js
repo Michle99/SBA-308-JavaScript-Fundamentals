@@ -97,10 +97,11 @@ function processSubmission(learnerData, assignmentScores, submission, assignment
   // find assignments by id
   const assignment = findAssignmentByID(assignments, assignmentID);
 
-  // if (!assignment) {
-  //   console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
-  //   return; // Skip this submission if the assignment is not found.
-  // }
+  // if not valid assignment isn't found
+  if (!assignment) {
+    console.warn(`Assignment with ID ${assignmentID} not found. Skipping submission.`);
+    return; // Skip this submission if the assignment is not found.
+  }
 
   // const dueDate = new Date(assignment.due_at);
 
