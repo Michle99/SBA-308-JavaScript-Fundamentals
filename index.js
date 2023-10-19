@@ -129,11 +129,11 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
         };
       }
 
-    //   learnerData[learnID].totalScore += (score / pointsPossible) * pointsPossible;
-    //   learnerData[learnID].totalWeight += pointsPossible;
-    //   assignmentScores[assignmentID] = (score / pointsPossible) * 100;
+      learnerData[learnID].totalScore += (score / pointsPossible) * pointsPossible;
+      learnerData[learnID].totalWeight += pointsPossible;
+      assignmentScores[assignmentID] = (score / pointsPossible) * 100;
 
-    // }
+    }
   }
 
   // const results = [];
