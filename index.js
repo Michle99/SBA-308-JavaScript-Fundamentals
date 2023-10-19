@@ -153,12 +153,12 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
       }
     }
 
-    // results.push(learnerResult);
+    results.push(learnerResult);
   }
 
   return results;
 }
 
 
-// const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-// console.log(result);
+const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+console.log(result);
