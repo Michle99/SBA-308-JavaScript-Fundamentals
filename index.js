@@ -117,9 +117,9 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
         throw new Error("Invalid input: points_possible cannot be 0.");
       }
 
-    //   if (typeof score !== "number" || isNaN(score)) {
-    //     throw new Error("Invalid input: Submission score must be a number.");
-    //   }
+      if (typeof score !== "number" || isNaN(score)) {
+        throw new Error("Invalid input: Submission score must be a number.");
+      }
 
     //   if (!learnerData[learnID]) {
     //     learnerData[learnID] = {
