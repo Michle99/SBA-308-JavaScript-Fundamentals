@@ -87,6 +87,30 @@ Additionally, if the learner’s submission is late (***submitted_at*** is past 
 
 #### Create a function named ***getLearnerData()*** that accepts these values as parameters, in the order listed: ***(CourseInfo, AssignmentGroup, [LearnerSubmission])***, and returns the formatted result, which should be an array of objects as described above.
 
+
+# Requirements
+
+The requirements listed here are ***absolute minimums***. Ensure that your application meets these requirements before attempting to further expand your features.
+Create your application locally, and initialize a local git repo. Make frequent commits to the repo. When your application is complete, ***push your repo to GitHub and submit the link to the GitHub page*** using the submission instructions at the top of this document.
+
+
+| ***Requirement*** | ***Weight***    |
+|--------------|-----------|
+| Declare variables properly using let and const where appropriate. | 5%     |
+| Use operators to perform calculations on variables and literals.      | 5%  |
+| Use strings, numbers, and Boolean values cached within variables.     | 5%  |
+| Use at least two if/else statements to control program flow. Optionally, use at least one switch statement.     | 10%  |
+| Use try/catch statements to manage potential errors in the code, such as incorrectly formatted or typed data being fed into your program.    | 5%  |
+| Utilize at least two different types of loops.   | 5%  |
+| Utilize at least one loop control keyword such as break or continue.     | 3%  |
+| Demonstrate the retrieval, manipulation, and removal of items in an array or properties in an object.     | 5%  |
+| Use functions to handle repeated tasks.     | 10%  |
+| Program outputs processed data as described above. Partial credit will be earned depending on the level of adherence to the described behavior.      | 20%  |
+| Ensure that the program runs without errors (comment out things that do not work, and explain your blockers - you can still receive partial credit).     | 10%  |
+| Commit frequently to the git repository.   | 5%  |
+| Include a README file that contains a description of your application.  | 2%  |
+
+
 # Contents
 The ```index.js``` file contains the response to the assessment.
 
