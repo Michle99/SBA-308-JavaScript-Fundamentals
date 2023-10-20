@@ -95,7 +95,7 @@ Create your application locally, and initialize a local git repo. Make frequent 
 
 
 | ***Requirement*** | ***Weight***    |
-|--------------|-----------|
+|:--------------|-----------|
 | Declare variables properly using let and const where appropriate. | 5%     |
 | Use operators to perform calculations on variables and literals.      | 5%  |
 | Use strings, numbers, and Boolean values cached within variables.     | 5%  |
