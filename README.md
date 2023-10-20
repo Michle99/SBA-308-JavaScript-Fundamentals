@@ -35,7 +35,7 @@ You will be provided with four different types of data:
 }
 ```
 - Each AssignmentInfo object within the assignments array looks like this:
-  ```
+```
   {
   "id": number,
   "name": string,
@@ -44,8 +44,9 @@ You will be provided with four different types of data:
   // the maximum points possible for the assignment
   "points_possible": number,
 }
-  ```
+```
 - An array of LearnerSubmission objects, which each look like this:
+
 ```
 {
     "learner_id": number,
